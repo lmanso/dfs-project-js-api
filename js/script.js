@@ -9,7 +9,7 @@ if (localStorage.getItem("data")) {
         let summary = document.createElement('p')
         let image = document.createElement('img');
         let status = document.createElement('p');
-
+        
         title.innerHTML = element.name;
         image.src = element.image.medium;
         summary.innerHTML = element.summary;
