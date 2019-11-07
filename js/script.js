@@ -3,32 +3,36 @@ if (localStorage.getItem("data")) {
     data = localStorage.getItem("data");
     data = JSON.parse(data);
     data.forEach(element => {
-        let parent = document.createElement('div')
-        let title = document.createElement('div')
-        let body = document.createElement('div');
-        let summary = document.createElement('p')
-        let image = document.createElement('img');
-        let status = document.createElement('p');
-        
-        title.innerHTML = element.name;
-        image.src = element.image.medium;
-        summary.innerHTML = element.summary;
-        status.innerHTML = element.status;
+        // debugger;
+        if (element.id <= 9) {
+            let parent = document.createElement('div')
+            let title = document.createElement('div')
+            let body = document.createElement('div');
+            let summary = document.createElement('p')
+            let image = document.createElement('img');
+            let status = document.createElement('p');
 
-        parent.appendChild(title);
-        parent.appendChild(body);
-        body.appendChild(image);
-        body.appendChild(summary);
-        body.appendChild(status);
+            title.innerHTML = element.name;
+            image.src = element.image.medium;
+            summary.innerHTML = element.summary;
+            status.innerHTML = element.status;
 
-        parent.classList.add("card", "border-success", "mb-3");
-        body.classList.add("card-body");
-        title.classList.add("card-header");
-        summary.classList.add("card-text");
-        status.classList.add("card-status");
+            parent.appendChild(title);
+            parent.appendChild(body);
+            body.appendChild(image);
+            body.appendChild(summary);
+            body.appendChild(status);
 
-        document.querySelector('#cardContainer').appendChild(parent);
+            parent.classList.add("card", "border-success", "mb-3");
+            body.classList.add("card-body");
+            title.classList.add("card-header");
+            summary.classList.add("card-text");
+            status.classList.add("card-status");
+
+            document.querySelector('#cardContainer').appendChild(parent);
+        }
     });
+
 } else {
     const requestAwait = async () => {
         const response = await fetch(`http://api.tvmaze.com/shows`)
@@ -45,24 +49,24 @@ if (localStorage.getItem("data")) {
             let summary = document.createElement('p')
             let image = document.createElement('img');
             let status = document.createElement('p');
-    
+
             title.innerHTML = element.name;
             image.src = element.image.medium;
             summary.innerHTML = element.summary;
             status.innerHTML = element.status;
-    
+
             parent.appendChild(title);
             parent.appendChild(body);
             body.appendChild(image);
             body.appendChild(summary);
             body.appendChild(status);
-    
+
             parent.classList.add("card", "border-success", "mb-3");
             body.classList.add("card-body");
             title.classList.add("card-header");
             summary.classList.add("card-text");
             status.classList.add("card-status");
-    
+
             document.querySelector('#cardContainer').appendChild(parent);
         });
     }

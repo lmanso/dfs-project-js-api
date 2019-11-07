@@ -14,47 +14,51 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script async src="js/script.js"></script>
+    <script async src="js/slide.js"></script>
+    <script async src="js/sections.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Panetflix</title>
 </head>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">uShow</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#all">Series</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#networks">Network</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0"> -->
-            <div class="form-inline my-2 my-lg-0">
-
-                <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button id="submitSearch" class="btn btn-secondary my-2 my-sm-0" data-toggle="modal"
-                    data-target="#exampleModal">Search</button>
-            </div>
-            <!-- </form> -->
-        </div>
-    </nav>
-</header>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Panetflix</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shows">Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#networks">Network</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0"> -->
+                <div class="form-inline my-2 my-lg-0">
+                    <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button id="submitSearch" class="btn btn-secondary my-2 my-sm-0" data-toggle="modal"
+                        data-target="#exampleModal">Search</button>
+                </div>
+                <!-- </form> -->
+            </div>
+        </nav>
+    </header>
+
     <section id="home">
         <div class="VOD">
             <iframe src="https://www.youtube.com/embed/5jw6ESx9CaQ" width="800" height="455" frameborder="0"></iframe>
@@ -72,9 +76,10 @@
             <div class="swiper-button-next"></div>
         </div>
     </section>
-    <section id="all">
+    <section id="shows">
         <div id="cardContainer"></div>
     </section>
+    <br>
     <section id="sectionSearch">
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -96,17 +101,18 @@
             </div>
         </div>
     </section>
+    <br>
     <section id="networks">
-                <div class="swiper-wrapper hbo ">
-                </div>
-                <div class="swiper-button-prev-hbo"></div>
-                <div class="swiper-button-next-hbo"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper hbo ">
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
         <div class="bbc"></div>
     </section>
-    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/slide.js"></script>
-    <script src="js/sections.js"></script>
 </body>
 
 </html>
